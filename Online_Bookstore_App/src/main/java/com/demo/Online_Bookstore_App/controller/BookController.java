@@ -24,8 +24,11 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/{id}") // Handles HTTP GET requests to fetch a book by its ID
+
+
+    @GetMapping("/{id}")
     public Book getBookById(@PathVariable Long id) {
+        System.out.println("Fetching book with ID: {}");  // ← Add this line
         return bookService.getBookById(id);
     }
 
